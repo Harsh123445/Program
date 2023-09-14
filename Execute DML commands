@@ -1,0 +1,8 @@
+create table dml(s_no number(12), s_name varchar(20), address varchar(20));
+insert into dml values(1,'harsha','athani');
+insert into dml values(2,'sham','dubai');
+insert into dml values(3,'ram','ayodhya');
+select * from dml;
+update dml set s_name='veronica' where s_no=2;
+select * from dml;
+delete from dml where s_no=2;
