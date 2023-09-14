@@ -1,0 +1,13 @@
+create table EmployeeTest(emp_no number(3)primary key,emp_name varchar(20),
+emp_address varchar(20),emp_salary number(6));
+insert into EmployeeTest values(1,'Akash','Athani',50000);
+insert into EmployeeTest values(2,'Rahul','Chikodi',60000);
+insert into EmployeeTest values(3,'Gopal','Nippani',40000);
+insert into EmployeeTest values(4,'Ramu','Gokak',80000);
+insert into EmployeeTest values(5,'Guru','Belagavi',70000);
+select *from EmployeeTest
+select count(emp_salary) from EmployeeTest;
+select sum(emp_salary) from EmployeeTest;
+select max(emp_salary) from EmployeeTest;
+select min(emp_salary) from EmployeeTest;
+select avg(emp_salary) from EmployeeTest;
