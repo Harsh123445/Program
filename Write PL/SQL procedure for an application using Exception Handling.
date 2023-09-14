@@ -1,0 +1,25 @@
+create table customer(id number(10),name varchar(10),age number(10),address varchar(10),salary number(10));
+insert into customer values('1','Ramesh','23','Allahabad','20000');
+insert into customer values('2','Suresh','22','Kanpur','22000');
+insert into customer values('3','Mahesh','24','Ghaziabad','24000');
+insert into customer values('4','Chandan','25','Noida','26000');
+insert into customer values('5','Alex','21','Paris','28000');
+insert into customer values('6','Sunita','20','Delhi','30000');
+select * from customer6161;
+DECLARE
+c_id customer6161.id%type := 8;
+c_name customer6161.name%type;
+c_addr customer6161.address%type;
+BEGIN
+SELECT name,address INTO c_name, c_addr
+FROM customer6161
+WHERE id = c_id;
+DBMS_OUTPUT.PUT_LINE ('Name:'|| c_name);
+DBMS_OUTPUT.PUT_LINE('Address:'|| c_addr);
+EXCEPTION
+WHEN no_data_found THEN
+dbms_output.put_line('No such customer!');
+WHEN others THEN
+dbms_output.put_line('ERROR!');
+END;
+/
