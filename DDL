@@ -1,0 +1,4 @@
+create table DDL(sno number(10),name varchar(20));
+alter table student22 add(address varchar(20));
+select * from DDL;                                                                                                                                                                                                drop table DDL;
+select * from DDL;
