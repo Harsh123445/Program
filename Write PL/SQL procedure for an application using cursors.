@@ -1,0 +1,18 @@
+create table emp33(name varchar(10),job varchar(10),sal number(10));
+insert into emp33 values('ram','developer',50000);
+insert into emp33 values('raj','tester',40000);
+declare
+v_name varchar2(10);
+v_job varchar2(10);
+v_sal number;
+cursor c1 is
+select name,job,sal from emp33;
+begin
+open c1;
+loop
+fetch c1 into v_name,v_job,v_sal;
+exit when c1%notfound;
+dbms_output.put_line(v_name||''||v_job||''||v_sal);
+end loop;
+close c1;
+end;
