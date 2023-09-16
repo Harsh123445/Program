@@ -1,0 +1,10 @@
+CREATE TABLE std7 (id NUMBER(3), name VARCHAR(10));
+INSERT INTO std7 VALUES (101, 'ravi');
+INSERT INTO std7 VALUES (102, 'deep');
+INSERT INTO std7 VALUES (103, 'rock');
+
+CREATE TABLE std11 (id NUMBER(3), marks number(10));
+INSERT INTO std11 VALUES (101, '85');
+INSERT INTO std11 VALUES (102, '90');
+INSERT INTO std11 VALUES (103, '95');
+ select a.id,a.name,b.marks from std7 a,std11 b where a.id=b.id and b.marks>(select marks from std11 where id='101');
