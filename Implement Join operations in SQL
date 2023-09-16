@@ -1,0 +1,24 @@
+create table customer62(id number(10),name varchar(10),age number(2),address
+varchar(10),salary number(10));
+ 
+insert into customer62 values(1,'Ramesh',32,'Ahmdabad',2000);
+insert into customer62 values(2,'Khilan',25,'Delhi',1500);
+insert into customer62 values(3,'Kaushik',23,'kota',2000);
+insert into customer62 values(4,'Chaitali',25,'Mumbai',6500);
+insert into customer62 values(5,'Hardik',27,'Bhopal',8500);
+insert into customer62 values(6,'Komal',22,'MP',4500);
+insert into customer62 values(7,'Muffy',24,'Indore',10000);
+
+select * from customer62;
+
+create table orders61( oid number(10), customerid number(10),amount
+number(10));
+insert into orders61 values(100,3,1500);
+insert into orders61 values(101,2,1560);
+insert into orders61 values(103,4,2060);
+insert into orders61 values(102,3,3000);
+select * from orders61;
+select id,name,amount from customer62 cross join orders61;
+select id,name,amount from customer62 inner join orders61 on customer62.id=orders61.customerid;
+select id,name,amount from customer62 right join orders61 on customer62.id=orders61.customerid;
+select id,name,amount from customer62 left join orders61 on customer62.id=orders61.customerid;
